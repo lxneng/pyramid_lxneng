@@ -22,6 +22,6 @@ class PyramidTemplate(Template):
 
 class ProjectTemplate(PyramidTemplate):
     _template_dir = 'pyramid_lxneng'
-    summary = 'pyramid lxneng project'
+    summary = 'pyramid_lxneng is a simple Paster template or scaffold for the Pyramid'
     template_renderer = staticmethod(paste_script_template_renderer)
 
