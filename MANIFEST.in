@@ -1,0 +1,3 @@
+include *.txt *.cfg
+recursive-include src/pyramid_lxneng/paster_templates *
+global-exclude *.pyc
