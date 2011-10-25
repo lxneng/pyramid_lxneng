@@ -1,18 +1,17 @@
 [app:main]
 use = egg:{{project}}
 
-pyramid.reload_templates = true
+pyramid.reload_templates = false
 pyramid.debug_authorization = false
 pyramid.debug_notfound = false
 pyramid.debug_routematch = false
-pyramid.debug_templates = true
+pyramid.debug_templates = false
 pyramid.default_locale_name = en
 
 jinja2.directories = {{project}}:templates
-pyramid.includes = 
-    pyramid_debugtoolbar
-    pyramid_jinja2
-sqlalchemy.url = sqlite:///%(here)s/{{project}}.db
+jinja2.i18n.domain = {{project}}
+sqlalchemy.url = mysql://root@localhost/{{project}}?charset=utf8
+sqlalchemy.pool_recycle = 3600
 
 session.key = {{project}}
 session.type = cookie

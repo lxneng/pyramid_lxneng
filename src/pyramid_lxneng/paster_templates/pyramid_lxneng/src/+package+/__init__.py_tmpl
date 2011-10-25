@@ -1,13 +1,19 @@
 from pyramid.config import Configurator
 from pyramid_jinja2 import renderer_factory
 from s4u.sqlalchemy import includeme
+from repoze.tm2 import TM
+from pyramid_beaker import session_factory_from_settings
 
 
 def main(global_config, **settings):
-    config = Configurator(settings=settings)
+    config = Configurator(settings=settings,
+			session_factory=session_factory_from_settings(settings)
+			)
     includeme(config)
     config.add_renderer('.html', renderer_factory)
     config.add_static_view('static', '{{project}}:static', cache_max_age=3600)
     config.add_route("home", "/")
     config.scan()
-    return config.make_wsgi_app()
+    app = config.make_wsgi_app()
+    app = TM(app)
+    return app
