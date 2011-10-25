@@ -1,7 +1,7 @@
 from pyramid.config import Configurator
 from pyramid_jinja2 import renderer_factory
 from s4u.sqlalchemy import includeme
-from repoze.tm2 import TM
+from repoze.tm import TM
 from pyramid_beaker import session_factory_from_settings
 
 
