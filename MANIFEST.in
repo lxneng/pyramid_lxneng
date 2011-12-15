@@ -1,3 +1,3 @@
 include *.txt *.cfg
-recursive-include src/pyramid_lxneng/paster_templates *
+recursive-include src/pyramid_lxneng/scaffolds *
 global-exclude *.pyc

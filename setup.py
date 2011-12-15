@@ -8,7 +8,7 @@ from setuptools import find_packages
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
-version = '1.0'
+version = '1.1'
 
 setup(name='pyramid_lxneng',
       version=version,
