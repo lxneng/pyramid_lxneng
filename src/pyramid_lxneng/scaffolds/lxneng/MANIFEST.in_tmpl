@@ -1,0 +1,6 @@
+include *.txt
+include *.ini
+include *.cfg
+include *.rst
+graft src/{{project}}/static
+graft src/{{project}}/templates

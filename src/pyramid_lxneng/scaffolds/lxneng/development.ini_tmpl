@@ -20,9 +20,9 @@ session.secret = {{project}}_session_cookie
 session.validate_key = {{project}}_validate_key
 
 [server:main]
-use = egg:Paste#http
+use = egg:pyramid#wsgiref
 host = 0.0.0.0
-port = 1986
+port = 6543
 
 # Begin logging configuration
 

@@ -23,7 +23,7 @@ setup(name='pyramid_lxneng',
       include_package_data=True,
       zip_safe=False,
       entry_points="""\
-      [paste.paster_create_template]
-      pyramid_lxneng = pyramid_lxneng.paster_templates:ProjectTemplate
+      [pyramid.scaffold]
+      lxneng = pyramid_lxneng.scaffolds:LxnengProjectTemplate
       """,
       )
