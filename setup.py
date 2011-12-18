@@ -8,7 +8,7 @@ from setuptools import find_packages
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
-version = '1.1'
+version = '1.2'
 
 setup(name='pyramid_lxneng',
       version=version,
@@ -24,6 +24,7 @@ setup(name='pyramid_lxneng',
       zip_safe=False,
       entry_points="""\
       [pyramid.scaffold]
-      lxneng = pyramid_lxneng.scaffolds:LxnengProjectTemplate
+      lxneng_sqlalchemy = pyramid_lxneng.scaffolds:SQLAlchemyProjectTemplate
+      lxneng_mongoengine = pyramid_lxneng.scaffolds:MongoEngineProjectTemplate
       """,
       )

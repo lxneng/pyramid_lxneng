@@ -1,9 +1,7 @@
 pyramid
 pyramid_debugtoolbar
 pyramid_jinja2
-SQLAlchemy
-zope.sqlalchemy
+pyramid_assetviews
 repoze.tm2
 pyramid_beaker
-s4u.sqlalchemy
--f http://dist.simplon.biz/
+mongoengine
