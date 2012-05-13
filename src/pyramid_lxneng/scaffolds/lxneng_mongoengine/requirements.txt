@@ -2,6 +2,7 @@ pyramid
 pyramid_debugtoolbar
 pyramid_jinja2
 pyramid_assetviews
-repoze.tm2
 pyramid_beaker
+pyramid_tm
 mongoengine
+waitress

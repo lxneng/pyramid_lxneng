@@ -1,0 +1,15 @@
+[buildout]
+extensions =
+    mr.developer
+    buildout-versions
+extends = versions.cfg
+parts = {{project}}
+versions = versions
+allow-picked-versions = true
+develop = .
+
+[{{project}}]
+recipe = zc.recipe.egg
+interpreter = python
+eggs =
+    {{project}}

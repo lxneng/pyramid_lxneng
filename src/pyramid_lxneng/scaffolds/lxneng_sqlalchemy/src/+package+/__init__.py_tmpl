@@ -1,6 +1,3 @@
-__import__('pkg_resources').declare_namespace(__name__)
-
-
 class ApplicationFactory(object):
     def create_configuration(self, settings):
         from pyramid.config import Configurator
@@ -15,7 +12,7 @@ class ApplicationFactory(object):
         return config
 
     def setup_sqlalchemy(self, config):
-        from s4u.sqlalchemy import includeme
+        from easy_sqlalchemy import includeme
         includeme(config)
 
     def setup_jinja2(self, config):

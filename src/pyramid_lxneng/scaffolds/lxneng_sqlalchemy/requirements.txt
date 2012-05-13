@@ -3,8 +3,7 @@ pyramid_debugtoolbar
 pyramid_jinja2
 pyramid_assetviews
 SQLAlchemy
-zope.sqlalchemy
-repoze.tm2
+easy_sqlalchemy
 pyramid_beaker
-s4u.sqlalchemy
--f http://dist.simplon.biz/
+pyramid_tm
+waitress

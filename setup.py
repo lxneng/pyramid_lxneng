@@ -26,5 +26,6 @@ setup(name='pyramid_lxneng',
       [pyramid.scaffold]
       lxneng_sqlalchemy = pyramid_lxneng.scaffolds:SQLAlchemyProjectTemplate
       lxneng_mongoengine = pyramid_lxneng.scaffolds:MongoEngineProjectTemplate
+      lxneng_plugin = pyramid_lxneng.scaffolds:PluginProjectTemplate
       """,
       )
