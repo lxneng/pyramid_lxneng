@@ -1,17 +1,17 @@
 """Scaffold installation script.
 """
 import os
-import re
 from setuptools import setup
 from setuptools import find_packages
+
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
-version = '1.2.1'
+
 
 setup(name='pyramid_lxneng',
-      version=version,
+      version='1.2.2',
       description='pyramid_lxneng pyramid scaffold',
       long_description=README + '\n\n' + CHANGES,
       author='Eric Lo',
@@ -19,7 +19,7 @@ setup(name='pyramid_lxneng',
       url='https://github.com/lxneng/pyramid_lxneng',
       packages=find_packages('src'),
       package_dir={'': 'src'},
-      install_requires=['pyramid'],
+      install_requires=['pyramid', 'webhelpers'],
       include_package_data=True,
       zip_safe=False,
       entry_points="""\
