@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-import re
-import unicodedata
-from webhelpers.html import literal
 from webhelpers.paginate import Page
 import hashlib
 import random
 import itertools
+from pyramid.security import authenticated_userid
+from pyramid.security import has_permission
 
 
 def get_or_create(session, model, **kw):
@@ -15,7 +14,7 @@ def get_or_create(session, model, **kw):
     obj = model(**kw)
     session.add(obj)
     return obj
-    
+
 
 def get_random_word(word_lenght=6):
     chars = ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs'
@@ -30,8 +29,8 @@ def generate_hash(url_string):
     m = hashlib.sha256()
     m.update(url_string)
     return m.hexdigest()[:14]
-    
-    
+
+
 def crop_text(text, length, suffix='...'):
     if not text:
         return text
@@ -60,11 +59,11 @@ def safe_int(value, default):
 
 class Tools(object):
     """A collection of tools that can be used in templates."""
-    
+
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        
+
     @property
     def is_anonymous(self):
         return authenticated_userid(self.request) is None
