@@ -11,8 +11,8 @@ pyramid.default_locale_name = en
 jinja2.directories = {{project}}:templates
 pyramid.includes =
     pyramid_debugtoolbar
-    pyramid_tm
-mongodb.db_name = {{project}}
+
+mongodb.url = mongodb://localhost/{{project}}
 
 session.key = {{project}}
 session.type = cookie

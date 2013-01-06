@@ -1,5 +1,4 @@
-__import__('pkg_resources').declare_namespace(__name__)
-
+# -*- coding: utf-8 -*-
 
 class ApplicationFactory(object):
     def create_configuration(self, settings):
@@ -16,7 +15,7 @@ class ApplicationFactory(object):
 
     def setup_mongoengine(self, settings):
         from mongoengine import connect
-        connect(settings['mongodb.db_name'])
+        connect('{{project}}', host=settings['mongodb.url'])
 
     def setup_jinja2(self, config):
         from pyramid_jinja2 import renderer_factory

@@ -11,7 +11,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
 
 setup(name='pyramid_lxneng',
-      version='1.2.3',
+      version='1.3',
       description='pyramid_lxneng pyramid scaffold',
       long_description=README + '\n\n' + CHANGES,
       author='Eric Lo',

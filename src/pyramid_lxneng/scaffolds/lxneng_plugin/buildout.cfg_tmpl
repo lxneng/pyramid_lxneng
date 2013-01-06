@@ -2,7 +2,6 @@
 extensions =
     mr.developer
     buildout-versions
-extends = versions.cfg
 parts = {{project}}
 versions = versions
 allow-picked-versions = true
@@ -13,3 +12,5 @@ recipe = zc.recipe.egg
 interpreter = python
 eggs =
     {{project}}
+
+[versions]

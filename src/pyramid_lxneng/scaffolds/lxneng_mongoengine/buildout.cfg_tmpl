@@ -3,14 +3,14 @@ extensions =
     mr.developer
     buildout-versions
 extends = versions.cfg
-parts = pyramid_lxneng
+parts = {{project}}
 versions = versions
 allow-picked-versions = true
 develop = .
 
-[pyramid_lxneng]
+[{{project}}]
 recipe = zc.recipe.egg
 interpreter = python
 eggs =
     pyramid
-    pyramid_lxneng
+    {{project}}
