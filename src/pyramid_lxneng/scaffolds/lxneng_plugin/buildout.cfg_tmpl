@@ -1,10 +1,9 @@
 [buildout]
 extensions =
     mr.developer
-    buildout-versions
 parts = {{project}}
 versions = versions
-allow-picked-versions = true
+show-picked-versions = true
 develop = .
 
 [{{project}}]
